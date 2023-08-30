@@ -1,0 +1,76 @@
+Commands:
+wsadmin.bat -lang jython -f scriptname.py
+
+Order:
+Juice:
+wsadmin.bat -lang jython -f constants.py
+wsadmin.bat -lang jython -f CreateJuiceServer.py
+wsadmin.bat -lang jython -f environment.py
+wsadmin.bat -lang jython -f DataSource.py
+wsadmin.bat -lang jython -f sib_messaging.py
+
+
+Uninstall and redeploy:
+wsadmin.bat -lang jython -f Uninstall_Juice.py
+wsadmin.bat -lang jython -f Deploy_Juice.py
+(donot modify script, instead modify the ear name)
+
+ETS:
+wsadmin.bat -lang jython -f constants.py
+wsadmin.bat -lang jython -f CreateJuiceETSServer.py
+wsadmin.bat -lang jython -f environment_ETS.py
+wsadmin.bat -lang jython -f DataSourceETS.py
+wsadmin.bat -lang jython -f sib_messaging_Ets.py
+
+
+
+Logs:
+
+Microsoft Windows [Version 10.0.22000.1817]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\windows\system32>cd C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin
+
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>wsadmin.bat -lang jython -f constants.py
+Realm/Cell Name: <default>
+Username: webuser1
+Password:
+ WASX7209I: Connected to process "server1" on node BLRKEC254407LNode01 using SOAP connector;  The type of process is: UnManagedProcess
+
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>wsadmin.bat -lang jython -f CreateJuiceServer.py
+WASX7209I: Connected to process "server1" on node BLRKEC254407LNode01 using SOAP connector;  The type of process is: UnManagedProcess
+
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>wsadmin.bat -lang jython -f environment.py
+WASX7209I: Connected to process "server1" on node BLRKEC254407LNode01 using SOAP connector;  The type of process is: UnManagedProcess
+
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>wsadmin.bat -lang jython -f DataSource.py
+WASX7209I: Connected to process "server1" on node BLRKEC254407LNode01 using SOAP connector;  The type of process is: UnManagedProcess
+Set DB2 JDBC driver path
+Set JDBC driver path
+Created Provider
+Created : JuiceDataSource(cells/BLRKEC254407LNode01Cell/nodes/BLRKEC254407LNode01/servers/Juice|resources.xml#DataSource_1683631243562)
+Set CP max connections - 50
+Created Datasource - JuiceDataSource
+Created : LoggingDataSource(cells/BLRKEC254407LNode01Cell/nodes/BLRKEC254407LNode01/servers/Juice|resources.xml#DataSource_1683631245888)
+Set CP max connections - 50
+Created Datasource - LoggingDataSource
+
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>wsadmin.bat -lang jython -f sib_messaging.py
+WASX7209I: Connected to process "server1" on node BLRKEC254407LNode01 using SOAP connector;  The type of process is: UnManagedProcess
+WASX7435W: Value disabled is converted to a boolean value of false.
+Factories
+SIBFactory
+SIBTopicFactory
+Queues
+Topics
+Activation Specs
+Save()
+
+C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\bin>
